@@ -227,8 +227,29 @@ myData =  {
     ]
 }
 
-console.log(myData.results)
-document.getElementById('content').appendChild("<tr></tr>")
-myData.results.forEach(data => {
-    console.log(data)
+// var table =  document.getElementById('myTable')
+
+
+var table = document.getElementById("myTable");
+
+
+myData.results.forEach((data, i) => {   
+    //add row
+    var row = table.insertRow(i + 1);
+
+    //add table
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
+    var cell6 = row.insertCell(5);
+    
+    //add data to table in a cell
+    cell1.innerHTML = i+ 1;
+    cell2.innerHTML = data.name;
+    cell3.innerHTML = data.rotation_period;
+    cell4.innerHTML = data.diameter;
+    cell5.innerHTML = data.climate;
+    cell6.innerHTML = data.gravity;
 });
