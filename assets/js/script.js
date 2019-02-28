@@ -1,5 +1,3 @@
-console.log("data")
-
 myData =  {
     "count": 61, 
     "next": "https://swapi.co/api/planets/?page=2", 
@@ -226,9 +224,6 @@ myData =  {
         }
     ]
 }
-
-// var table =  document.getElementById('myTable')
-
 
 var table = document.getElementById("myTable");
 
